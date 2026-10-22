@@ -1,0 +1,38 @@
+id_sensor,nombre_direccion,direccion_codigo
+300015661,IN,in
+300015663,IN,in
+300022736,Vers Canal,in
+300022736,Vers Av Frédéric Estèbe,out
+300022739,Vers Blagnac,out
+300022739,Vers Toulouse,in
+300022745,Vers centre ville,in
+300022745,Vers Patte d'Oie,out
+300025314,Vers centre ville,in
+300025314,Vers périphérique,out
+300025316,Vers centre ville,in
+300025316,Vers périphérique,out
+300015663,OUT,out
+300015662,OUT,out
+300015662,IN,in
+100044066,Vers Ramontville,out
+100058516,UNDEFINED,undefined
+300015661,OUT,out
+300025317,Vers Rte de Revel,out
+300025317,Vers centre ville,in
+300025318,Vers centre ville,in
+300025318,Vers Rte de Revel,out
+300025321,Vers Patte d'Oie,in
+300025321,Vers Bd Jean Brunhes,out
+300045520,IN,in
+300045520,OUT,out
+100044066,Vers centre ville,in
+300052735,OUT,out
+300021473,OUT vers Airbus,out
+300021473,IN vers la Crabe,in
+300052664,IN,in
+300052670,OUT,out
+300052687,vers le pont,in
+300052735,IN,in
+300052670,IN,in
+300052687,OUT,out
+300052664,OUT,out

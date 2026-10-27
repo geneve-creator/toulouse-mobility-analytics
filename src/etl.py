@@ -50,7 +50,7 @@ def ejecutar_etl():
     print("🏗️ [3/4] Generando Tablas del Modelo Estrella...")
 
     # A) Dimensión Sensores / Ubicaciones
-    dim_sensores = df[["id_sensor", "nombre_direccion", "direccion_codigo"]].drop_duplicates().reset_index(drop=True)
+    dim_sensores = df[["id_sensor", "nombre_direccion", "direccion_codigo"]].drop_duplicates(subset=["id_sensor"]).reset_index(drop=True)
 
     # B) Dimensión Tiempo
     fechas_unicas = df[["fecha_hora"]].drop_duplicates().dropna().reset_index(drop=True)
@@ -62,7 +62,7 @@ def ejecutar_etl():
     dim_tiempo["nombre_mes"] = dim_tiempo["fecha_hora"].dt.strftime("%B")
     dim_tiempo["dia"] = dim_tiempo["fecha_hora"].dt.day
     dim_tiempo["hora"] = dim_tiempo["fecha_hora"].dt.hour
-    dim_tiempo["dia_semana_num"] = dim_tiempo["fecha_hora"].dt.dayofweek  # 0=Lunes, 6=Domingo
+    dim_tiempo["dia_semana_num"] = dim_tiempo["fecha_hora"].dt.day_of_week  # 0=Lunes, 6=Domingo
     dim_tiempo["nombre_dia"] = dim_tiempo["fecha_hora"].dt.strftime("%A")
     dim_tiempo["es_fin_de_semana"] = dim_tiempo["dia_semana_num"].isin([5, 6]).astype(int)
     

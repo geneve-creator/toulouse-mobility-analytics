@@ -40,6 +40,9 @@ def ejecutar_etl():
         "Direction name": "nombre_direccion"
     })
 
+    # Corrección de typos en nombres de calles/direcciones
+    df["nombre_direccion"] = df["nombre_direccion"].str.replace("Ramontville", "Ramonville", regex=False)
+
     # Convertir a datetime y manejar zona horaria
     df["fecha_hora"] = pd.to_datetime(df["fecha_hora_raw"], errors="coerce")
     
